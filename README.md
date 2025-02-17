@@ -3,3 +3,5 @@
 ## prof. Marcelo Amorim
 
 * Aula 01 - Apresentação / (REVISÃO) Laços de repetição [aula01](./Aula01-10-Fev/)
+* Aula 02 - Funções / Módulos [aula01](./Aula02-17-Fev/)
+* 

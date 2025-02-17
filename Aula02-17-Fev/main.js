@@ -14,7 +14,7 @@ function converteSegundosFormatoRelogio(segundos) {
 }
 
 //let s = parseInt(prompt("digite segundos"))
-let texto = converteSegundosFormatoRelogio(30234)
+//let texto = converteSegundosFormatoRelogio(30234)
 //console.log("oi gente");
 //converteSegundosFormatoRelogio(3456)
 
@@ -23,5 +23,19 @@ let texto = converteSegundosFormatoRelogio(30234)
 //console.log("segundos",segundos);
 
 let elem = document.getElementById("relogio01")
-console.log(elem);
-elem.innerHTML = texto
+let elem2 = document.getElementById("relogio02")
+//console.log(elem);
+//elem.innerHTML = texto
+
+
+let segundos = 1
+
+function atualizaRelogioBrasil() {
+    segundos++
+    let texto = converteSegundosFormatoRelogio(segundos)
+    elem.innerHTML = texto
+    texto = converteSegundosFormatoRelogio(segundos+10800)
+    elem2.innerHTML = texto
+}
+
+setInterval(atualizaRelogioBrasil,10)

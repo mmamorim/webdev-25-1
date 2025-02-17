@@ -1,4 +1,7 @@
 # Aula 02 - 17/02
 
 * Funções
-* Módulos import / export
+* SetInterval: chama uma função a cada período de tempo 
+* SetTimeout: chama uma função uma vez após um período de tempo 
+
+* getElementByID

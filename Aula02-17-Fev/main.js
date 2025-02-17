@@ -9,14 +9,19 @@ function converteSegundosFormatoRelogio(segundos) {
     if(horas<10) {
         horas = "0"+horas
     }
-    console.log(horas+":"+minutos+":"+segundos);    
+    //console.log(horas+":"+minutos+":"+segundos);    
+    return horas+":"+minutos+":"+segundos
 }
 
 //let s = parseInt(prompt("digite segundos"))
-converteSegundosFormatoRelogio(3600)
-console.log("oi gente");
-converteSegundosFormatoRelogio(3456)
+let texto = converteSegundosFormatoRelogio(30234)
+//console.log("oi gente");
+//converteSegundosFormatoRelogio(3456)
 
 //console.log("horas",horas);
 //console.log("minutos",minutos);
 //console.log("segundos",segundos);
+
+let elem = document.getElementById("relogio01")
+console.log(elem);
+elem.innerHTML = texto

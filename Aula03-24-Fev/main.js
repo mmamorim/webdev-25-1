@@ -1,4 +1,7 @@
+
 import { createUser } from "./user.js";
 
-let user = createUser()
-console.log(user);
+let u = createUser()
+let u2 = createUser()
+console.log("user: ",u);
+console.log("user: ",u2);

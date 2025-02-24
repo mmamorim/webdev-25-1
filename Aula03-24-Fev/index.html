@@ -6,7 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <div class="border p-2 rounded w-120">
+        <div class="flex items-center gap-2">
+            <div>  
+                <img id="foto" class="w-30 rounded-2xl" src="https://randomuser.me/api/portraits/med/men/24.jpg" alt="">
+            </div>
+            <div class="text-xl">
+                <div>
+                    <span class="font-bold">Nome:</span>
+                    <span id="nome">Ana</span>
+                </div>
+                <div>
+                    <span class="font-bold">Email:</span>
+                    <span>ama@ama.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="main.js" type="module"></script>
 </body>
 </html>

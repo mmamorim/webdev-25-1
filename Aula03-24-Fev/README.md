@@ -1,4 +1,4 @@
-# Aula 2 - 19/FEV - Modularização (import/export)
+# Aula 3 - 24/FEV - Modularização (import/export)
 
 Existem duas formas: 
 * CJS (Common JavaScript) ou

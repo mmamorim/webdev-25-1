@@ -1,8 +1,8 @@
-import { fakeRG } from "./fakers.js"
+import { fakeRG, fakeNome } from "./fakers.js"
 
 export function createUser() {
     let user = {
-        nome: "Ana",
+        nome: fakeNome(),
         sobrenome: "Silva",
         rg: fakeRG(),
         email: "ana@ana.com"

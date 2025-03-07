@@ -1,0 +1,35 @@
+.btn {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    padding: 2px 5px 2px 5px;
+    text-decoration: none;
+    color: #202020;
+}
+
+.btn-sm {
+    font-size: 10pt;
+}
+
+.btn-lg {
+    font-size: 18pt;
+}
+
+.btn-xl {
+    font-size: 26pt;
+}
+
+.btn-success {
+    background-color: #008000;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #800000;
+    color: white;
+}
+
+.btn-warning {
+    background-color: #FF4800;
+    color: white;
+}

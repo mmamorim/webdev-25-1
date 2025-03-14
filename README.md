@@ -8,3 +8,4 @@
 * Aula 03 - Funções / Objetos / Módulos [aula03](./Aula03-24-Fev/)
 * Aula 04 - NodeJS / npm [aula04](./Aula04_07Mar/)
   * Frontend - Bootstrap [aula04-Frontend](./Aula04_07MarFront/)
+* Aula 05 - React + Vite [aula05](./Aula05_14Mar/)

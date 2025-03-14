@@ -1,3 +1,4 @@
+import Emoji from "./Emoji";
 
 function CaixaLegal({ label, cor }) {
 
@@ -7,7 +8,7 @@ function CaixaLegal({ label, cor }) {
     return(
         <>
             <span className={"badge text-bg-"+cor+" mx-1"}>
-                {label} sdjhsdjh {nome}
+                {label} <Emoji /> {nome}
             </span>
         </>
     )

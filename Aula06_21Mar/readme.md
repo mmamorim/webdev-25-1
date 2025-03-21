@@ -11,6 +11,17 @@ O Tailwind CSS é um framework CSS de código aberto que se destaca por sua abor
 Link para instalação no React com vite
 [https://windicss.org/integrations/vite.html](https://windicss.org/integrations/vite.html)
 
+## Configurar o WindCss para usar os estilos padrão do navegador
+
+Adicionar o arquivo ```windi.config.js```
+
+~~~js
+import { defineConfig } from 'vite-plugin-windicss'
+
+export default defineConfig({
+  preflight: false,
+})
+~~~
 
 # Iconify para React
 

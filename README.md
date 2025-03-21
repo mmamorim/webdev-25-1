@@ -9,3 +9,8 @@
 * Aula 04 - NodeJS / npm [aula04](./Aula04_07Mar/)
   * Frontend - Bootstrap [aula04-Frontend](./Aula04_07MarFront/)
 * Aula 05 - React + Vite [aula05](./Aula05_14Mar/)
+* Aula 06 - [aula06](./Aula06_21Mar/)
+  - Tailwind
+  - Iconify
+  - useState
+  - JSX  

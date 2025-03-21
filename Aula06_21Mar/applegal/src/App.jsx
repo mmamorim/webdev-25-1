@@ -1,14 +1,22 @@
+import { Icon } from "@iconify/react";
+import MeuBotao from "./MeuBotao";
+import CaraCoroa from "./CaraCoroa";
 
 function App() {
 
   return (
     <>
       <h1>Meu app legal</h1>
-
-      <span>Alguma coisa</span>
-      <span className="border border-cyan-800 rounded px-1 bg-blue-200 hover:bg-blue-600 hover:border-3 cursor-pointer mx-2">
-        Outra coisa
+      <span className="flex items-center">
+        <span>Alguma coisa</span>
+        <Icon icon="mi:log-in" className="text-xs ml-1"/>
       </span>
+      
+      <MeuBotao label="Sair"/>
+      <MeuBotao label="Saiba mais" />
+      <MeuBotao label="Perfil" />
+
+      <CaraCoroa />
     </>
   )
 }

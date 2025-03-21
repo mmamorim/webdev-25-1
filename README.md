@@ -13,4 +13,4 @@
   - Tailwind
   - Iconify
   - useState
-  - JSX  
+  - JSX

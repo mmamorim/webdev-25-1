@@ -12,5 +12,6 @@
 * Aula 06 - [aula06](./Aula06_21Mar/)
   - Tailwind
   - Iconify
+* Aula 07 - [aula07](./Aula07_28Mar/)
   - useState
   - JSX

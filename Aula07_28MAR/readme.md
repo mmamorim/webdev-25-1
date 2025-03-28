@@ -1,4 +1,4 @@
-# Aula 06 (26/03) 
+# Aula 07 (28/03) 
 
 # Template Projeto - React + Vite
 

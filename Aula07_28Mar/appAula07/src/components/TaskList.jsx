@@ -1,21 +1,20 @@
+import { Icon } from "@iconify/react/dist/iconify.js"
+import TaskListItem from "./TaskListItem"
 
 export default function TaskList() {
 
     return (
         <>
-            <div>
-                Lista de tarefas:
-            </div>
-            <hr />
-            <div>
+            <div className="border border-black p-2 m-2 rounded w-120">
                 <div>
-                    Tarefa 1
+                    Lista de tarefas:
                 </div>
+                <hr className="my-2" />
                 <div>
-                    Tarefa 1
-                </div>
-                <div>
-                    Tarefa 1
+                    <TaskListItem />
+                    <TaskListItem />
+                    <TaskListItem />
+                    <TaskListItem />
                 </div>
             </div>
         </>

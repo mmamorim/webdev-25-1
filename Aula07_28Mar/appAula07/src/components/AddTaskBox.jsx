@@ -1,5 +1,11 @@
+import { useState } from "react"
 
 export default function AddTaskBox() {
+    const [taskName, setTaskName ]  = useState("Alguma tarefa")
+
+    function addTask() {
+        console.log("TaskName: ",taskName);        
+    }
 
     return (
         <>
@@ -12,8 +18,8 @@ export default function AddTaskBox() {
                     <div>
                         Tarefa:
                     </div>
-                    <input type="text" className="border border-black p-1 w-45" />
-                    <button className="border border-black px-1 rounded">
+                    <input type="text" value={taskName} onChange={(e) => { setTaskName(e.target.value) }} className="border border-black p-1 w-45" />
+                    <button onClick={addTask} className="border border-black px-1 rounded">
                         Adicionar
                     </button>
                 </div>

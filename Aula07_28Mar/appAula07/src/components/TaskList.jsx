@@ -12,9 +12,9 @@ export default function TaskList() {
 
     return (
         <>
-            <div className="border border-black p-2 m-2 rounded md:w-120">
+            <div className="border border-black p-2 m-2 rounded w-120">
                 <div>
-                    Lista de tarefas: 
+                    Lista de tarefas:  
                     <button onClick={addTask} className="border border-black px-2">
                         Add
                     </button>

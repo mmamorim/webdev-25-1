@@ -2,6 +2,7 @@ import { useState } from "react"
 
 export default function AddTaskBox() {
     const [taskName, setTaskName ]  = useState("Alguma tarefa")
+    
 
     function addTask() {
         console.log("TaskName: ",taskName);        

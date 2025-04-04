@@ -11,6 +11,12 @@ export default function TaskList() {
         setTasks([...tasks, taskName])
     }
 
+    function onClickRemove(idx) {
+        console.log("onClickRemove",idx);
+        tasks.splice(idx,1)
+        setTasks([...tasks])
+    }
+
     return (
         <>
             <AddTaskBox onAddTaskName={addTask}/>
@@ -22,7 +28,7 @@ export default function TaskList() {
                 </div>
                 <hr className="my-2" />
                 <div>
-                    {tasks.map((elem, idx) => <TaskListItem key={idx} taskName={elem} />)}
+                    {tasks.map((elem, idx) => <TaskListItem onRemove={onClickRemove} key={idx} taskName={elem} idx={idx} />)}
                 </div>
             </div>
         </>

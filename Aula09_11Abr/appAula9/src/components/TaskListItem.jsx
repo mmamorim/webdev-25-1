@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
 import { useState } from "react";
 
-export default function TaskListItem({ taskName, idx, onRemove, ultimo }) {
-    const [done, setDone] = useState(true)
+export default function TaskListItem({ taskName, idx, onRemove, onDone, ultimo, done }) {
+    //const [done, setDone] = useState(true)
 
     function clickRemove() {
         console.log("clickRemove", idx);
@@ -11,7 +11,7 @@ export default function TaskListItem({ taskName, idx, onRemove, ultimo }) {
 
     function doneClick() {
         console.log("doneClick");
-        setDone(!done)
+        onDone(idx)
     }
 
     return (

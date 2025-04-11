@@ -18,7 +18,8 @@ export default function TaskList() {
         console.log("addTask", taskName);
         let task = {
             id: sgdb.newID("task"),
-            task: taskName
+            task: taskName,
+            done: false
         }
         console.log("task",task);
         sgdb.data.todos[task.id] = task
@@ -26,10 +27,25 @@ export default function TaskList() {
         setTasks(sgdb.getData().todos)
     }
 
-    function onClickRemove(idx) {
-        console.log("onClickRemove", idx);
-        tasks.splice(idx, 1)
-        setTasks([...tasks])
+    function onClickRemove(id) {
+        console.log("onClickRemove", id);
+        //console.log(sgdb.data.todos[id])
+        delete sgdb.data.todos[id]
+        sgdb.write()
+        //tasks.splice(idx, 1)
+        setTasks(sgdb.getData().todos)
+    }
+
+    function onDone(id) {
+        console.log("onDone",id);
+        sgdb.data.todos[id].done = !sgdb.data.todos[id].done
+        sgdb.write()
+        setTasks(sgdb.getData().todos)
+        //if(sgdb.data.todos[id].done) {
+        //    sgdb.data.todos[id].done = false
+        //} else {
+        //    sgdb.data.todos[id].done = true
+        //}
     }
 
     return (
@@ -51,7 +67,7 @@ export default function TaskList() {
                     </div>
                 }
                 <div>
-                    {Object.keys(tasks).map((id) => <TaskListItem onRemove={onClickRemove} key={id} taskName={tasks[id].task} idx={id}  />)}
+                    {Object.keys(tasks).map((id) => <TaskListItem onDone={onDone} onRemove={onClickRemove} key={id} taskName={tasks[id].task} idx={id} done={tasks[id].done} />)}
                 </div>
             </div>
         </>

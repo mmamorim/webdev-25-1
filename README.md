@@ -17,3 +17,7 @@
   - JSX
 * Aula 08 - [aula08](./Aula08_04Abr/)
   - Todo List
+* Aula 09 - [aula09](./Aula09_11Abr/)  
+  - Todo List (A Revanche!)
+  - UseEffect
+  - Persistindo os dados com localStorage

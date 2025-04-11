@@ -2,13 +2,23 @@ import { Icon } from "@iconify/react/dist/iconify.js"
 import TaskListItem from "./TaskListItem"
 import { useState } from "react"
 import AddTaskBox from "./AddTaskBox";
+import sgdb from "../sgdb.js"
+
+sgdb.init()
 
 export default function TaskList() {
-    const [tasks, setTasks] = useState(["Uma tarefa legal", "Ir na feira", "Estudar React", "Programar mais"])
+    const [tasks, setTasks] = useState(["Estudar React", "Programar mais"])
 
     function addTask(taskName) {
         console.log("addTask", taskName);
-        setTasks([...tasks, taskName])
+        let task = {
+            id: sgdb.newID("task"),
+            task: taskName
+        }
+        console.log("task",task);
+        sgdb.data.todos[task.id] = task
+        sgdb.write()
+        //setTasks([...tasks, taskName]),
     }
 
     function onClickRemove(idx) {

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Teste LocalStorage</h1>
+
+    <script>
+        let user = {
+            id: "ana",
+            nome: "Ana Alface",
+            email: "ana@ana.com"
+        }
+        console.log("user", user);
+        console.log("user", JSON.stringify(user));
+
+        let texto = JSON.stringify(user)
+        localStorage.setItem("aula9_user", texto)
+
+        let valor = localStorage.getItem("aula9_user")
+        console.log("valor:", valor);
+        let obj = JSON.parse(valor)
+        console.log("obj:", obj);
+
+    </script>
+</body>
+
+</html>

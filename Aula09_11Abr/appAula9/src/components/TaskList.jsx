@@ -1,13 +1,18 @@
 import { Icon } from "@iconify/react/dist/iconify.js"
 import TaskListItem from "./TaskListItem"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import AddTaskBox from "./AddTaskBox";
 import sgdb from "../sgdb.js"
 
 sgdb.init()
 
 export default function TaskList() {
-    const [tasks, setTasks] = useState(["Estudar React", "Programar mais"])
+    const [tasks, setTasks] = useState({})
+
+    useEffect(() => {
+        console.log("passei aqui")
+        setTasks(sgdb.getData().todos)
+    }, []);
 
     function addTask(taskName) {
         console.log("addTask", taskName);
@@ -18,7 +23,7 @@ export default function TaskList() {
         console.log("task",task);
         sgdb.data.todos[task.id] = task
         sgdb.write()
-        //setTasks([...tasks, taskName]),
+        setTasks(sgdb.getData().todos)
     }
 
     function onClickRemove(idx) {
@@ -46,7 +51,7 @@ export default function TaskList() {
                     </div>
                 }
                 <div>
-                    {tasks.map((elem, idx) => <TaskListItem onRemove={onClickRemove} key={idx} taskName={elem} idx={idx} ultimo={idx==tasks.length-1} />)}
+                    {Object.keys(tasks).map((id) => <TaskListItem onRemove={onClickRemove} key={id} taskName={tasks[id].task} idx={id}  />)}
                 </div>
             </div>
         </>

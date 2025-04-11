@@ -14,6 +14,11 @@ export default function TaskListItem({ taskName, idx, onRemove, onDone, ultimo, 
         onDone(idx)
     }
 
+    function clickEdit() {
+        console.log("clickEdit");
+        let nome = prompt("Digite o nome da tarefa")
+    }
+
     return (
         <>
             <div className="bg-gray-200 p-2 rounded my-1 flex items-center justify-between">
@@ -35,7 +40,7 @@ export default function TaskListItem({ taskName, idx, onRemove, onDone, ultimo, 
                     </div>
                 </div>
                 <div className="flex items-center gap-2">
-                    <div onClick={clickRemove} className="border border-black rounded-2xl px-1.5 pt-1 bg-blue-800 text-white">
+                    <div onClick={clickEdit} className="border border-black rounded-2xl px-1.5 pt-1 bg-blue-800 text-white">
                         <Icon icon="mdi:edit" />
                     </div>
                     <div onClick={clickRemove} className="border border-black rounded-2xl px-1.5 pt-1 bg-gray-800 text-white">

@@ -24,3 +24,5 @@
 * Aula 10 - [aula10](./Aula10_25Abr/) 25/ABR 
   - React Router
   - [CP6](https://github.com/mmamorim/CP5-Frontend-Webdev)
+* Aula 11 - [aula11](./Aula11_09Mai/) 09/05 
+  - React Slots

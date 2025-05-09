@@ -14,6 +14,7 @@ function App() {
       <hr />
 
       <div>
+
         <Card>
           <CardTitle>
             Oi Gente
@@ -33,6 +34,7 @@ function App() {
             </div>
           </CardFooter>
         </Card>
+
 
       </div>
     </>

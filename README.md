@@ -26,3 +26,4 @@
   - [CP6](https://github.com/mmamorim/CP5-Frontend-Webdev)
 * Aula 11 - [aula11](./Aula11_09Mai/) 09/05 
   - React Slots
+* Aula 12 - [CP6](https://github.com/mmamorim/CP6-Webdev) - 16/MAI 

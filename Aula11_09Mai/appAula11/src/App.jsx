@@ -3,18 +3,34 @@ import Card from "./Card/Card";
 import CardTitle from "./Card/CardTitle"
 import CardBody from "./Card/CardBody";
 import CardFooter from "./Card/CardFooter";
+import Modal from "./Modal";
+import { useState } from "react";
 
 function App() {
+  const [ dialog, setDialog ] = useState(false)
 
   return (
-    <>
+    <>    
+
+      <Modal show={dialog} >
+        <div className="p-1">
+          <div className="p-1 text-lg font-bold">
+            Um erro aconteceu
+          </div>
+          <hr />
+          <div className="mt-3 mx-2">
+            Alguma coisa não funcionou!
+          </div>
+        </div>
+      </Modal>
+
       <div className="bg-gray-300 m-1 p-2 rounded">
         App template - Vite + React + WindCSS + Iconify
       </div>
       <hr />
 
-      <div>
 
+      <div>
         <Card>
           <CardTitle>
             Oi Gente
